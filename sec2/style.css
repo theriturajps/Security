@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "tempest";
+    src: url(./font/TempestApache-a3OJ.otf) format("opentype");
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #f7f7f7; /* Light gray background */
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 0px 4px 1px rgb(0 0 0 / 87%);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 8px;
+    margin-top: 6em;
+}
+
+header {
+    background: rgb(0 0 0 / 87%);
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+h1 {
+    font-family: 'tempest', sans-serif;
+}
+
+.utility {
+    background: rgb(0 0 0 / 87%);
+    color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.top-btn-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #0056b3; /* Slightly darker blue button background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 0 5px; /* Added spacing between buttons */
+}
+
+.toggle-btn.active {
+    background: #007bff;
+}
+
+.util-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8rem;
+}
+
+.uinput {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid yellowgreen;
+    background: rgb(0 0 0 / 50%);
+    color: #00ff39;
+    outline: none;
+    border-radius: 6px;
+}
+
+.util-btn {
+    padding: 8px 16px;
+    border: none;
+    background: rgb(74 78 97 / 62%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.util-btn:hover {
+    background: rgba(51, 88, 255, 0.8);
+}
+
+button#dec-btn {
+    padding: 8px 16px;
+    border: none;
+    background: rgb(74 78 97 / 62%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+button#dec-btn:hover {
+    background: rgba(51, 88, 255, 0.8);
+}
+
+form#enc-form {
+    display: flex;
+    gap: 10px;
+}
+
+.key-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.key-holder {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    color: #fff;
+}
+
+#caution {
+    font-size: 70%;
+    font-family: 'tempest';
+    color: #00ff39;
+}
+
+.output-container {
+    padding: 10px;
+    background: rgba(0, 7, 0, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    color: #fff;
+}
+
+.block {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+form#dec-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+p#enc-out, p#dec-out {
+    word-break: break-word;
+}
+
+/* Media Query for Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin-top: 6em;
+    }
+
+    .toggle-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 5px; /* Added spacing between buttons */
+    }
+
+    .form-container {
+        gap: 8px;
+    }
+
+    .uinput {
+        padding: 8px;
+    }
+
+    .util-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+
+    header {
+        font-size: 20px;
+    }
+
+    .toggle-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 5px; /* Added spacing between buttons */
+    }
+
+    .utility {
+        padding: 10px; /* Added more spacing */
+    }
+
+    .top-btn-holder {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .toggle-btn.active {
+        background: #007bff;
+    }
+
+    .uinput {
+        padding: 8px;
+    }
+
+    .util-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
